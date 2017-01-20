@@ -14,7 +14,7 @@
     :else             nil))
 
 (defn cascade
-  ([c] (cascade-2 c #(identity %)))
+  ([c] (cascade c #(identity %)))
   ([c f & {:keys [reduce? reduce-val]}]
    (let [percolate (if reduce?
                      (fn [idx] (trickle idx c f reduce-val))
@@ -26,8 +26,3 @@
            (vector? itm) (conj itm (percolate idx)) 
            :else         (throw (Exception. "Cascade: collection item must be a map or a vector."))))
        c))))
-
-
-;; confluence
-;; take-nth
-;; take-while?

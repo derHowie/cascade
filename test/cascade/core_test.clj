@@ -45,12 +45,12 @@
 
 (deftest predicate-fn-with-val
   (testing "predicate function is applied to preceeding items in collection then returned in each 'before' key"
-    (testing "maps: " (let [result (cascade test-map-vector reduction-predicate :reduce? true :reduce-val {:val 1})]
+    (testing "maps: " (let [result (cascade test-map-vector reduction-predicate :reduce? true :start-value {:val 1})]
       (is (= (:csd (nth result 1)) {:val 3}))
       (is (= (:csd (nth result 2)) {:val 9}))
       (is (= (:csd (nth result 3)) {:val 10}))))
     (testing "vectors: "
-      (let [result (cascade test-vec-vector reduction-vec-predicate :reduce? true :reduce-val [9])]
+      (let [result (cascade test-vec-vector reduction-vec-predicate :reduce? true :start-value [9])]
         (is (= (second (nth result 1)) [9 1]))
         (is (= (second (nth result 2)) [9 1 2]))))))
 

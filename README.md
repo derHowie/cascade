@@ -68,6 +68,12 @@ You may also provide a start value value when using `reduce` with cascade.
 ;; => ([2 3] [5 6] [10 30] [1 300]) 
 ```
 
+### Note:
+
+You may have noticed while reading these examples that the reduce function does not include the item it is appended to. I realize in a lot of cases, one may want to include that value, however I believe that type of functionality would be limiting to those who want to reduce the preceeding values then call a different function involving cascade's result and the current item.
+
+### Example:
+
 Let's look at a slightly less contrived example to see why cascade can be useful:
 
 In this scenario we have been contracted to build an application that helps the proprietor of a petting zoo get a better visualization of his day-to-day operations while also balancing the books.
@@ -134,6 +140,11 @@ At a glance it's hard to glean a lot of information from this data, but with cas
 ;; =>  {:ledger-balance 1396.20
 ;; =>   :patrons-to-date 84})
 ```
+
+Woo! Now we have an collection illustrating the state of affairs at the beginning of each day.
+
+I have found that if you have a lot of information you need to keep a running tally on, like a bank statement for example, this type of output can be very handy. In clojurescript applications with uni-directional data flow, using Reagent for example, calling cascade in the render function can be powerful. Mutating cascade's data source in this case will cause a ripple in your data and everything following the mutated value with be recalculated in a whirlwind of reactive, uni-directional sauciness.
+
 
 ## License
 

@@ -53,7 +53,3 @@
       (let [result (cascade test-vec-vector reduction-vec-predicate :reduce? true :start-value [9])]
         (is (= (second (nth result 1)) [9 1]))
         (is (= (second (nth result 2)) [9 1 2]))))))
-
-(deftest data-type
-  (testing "an exception is thrown if the data type of the collection items is not a map or a vector"
-    (is (thrown? Exception (cascade [1 2 3])))))

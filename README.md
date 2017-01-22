@@ -4,9 +4,7 @@ Informs collection items with cascading data from earlier in the collection.
 
 ## Usage
 
-```clojure
-[cascade "0.1.0"]
-```
+[![Clojars Project](https://img.shields.io/clojars/v/cascade.svg)](https://clojars.org/cascade)
 
 In cases where the order of a collection drives a piece of your application, cascade can surface the data for each preceeding item in the collection and allow you to manipulate it.
 
@@ -141,9 +139,9 @@ At a glance it's hard to glean a lot of information from this data, but with cas
 ;; =>   :patrons-to-date 84})
 ```
 
-Woo! Now we have an collection illustrating the state of affairs at the beginning of each day.
+Woo! Now we have a collection illustrating the state of affairs at the beginning of each day.
 
-I have found that if you have a lot of information you need to keep a running tally on, like a bank statement for example, this type of output can be very handy. In clojurescript applications with uni-directional data flow, using Reagent for example, calling cascade in the render function can be powerful. Mutating cascade's data source in this case will cause a ripple in your data and everything following the mutated value with be recalculated in a whirlwind of reactive, uni-directional sauciness.
+I have found that if you have a lot of information you need to keep a running tally on, like a bank statement for example, this type of output can be very handy. In clojurescript applications with uni-directional data flow, using Reagent for example, calling cascade in the render function can be powerful. Mutating cascade's data source in this case will cause a ripple in your data and everything following the mutated value with be recalculated in a whirlwind of reactive, uni-directional greatness.
 
 
 ## License

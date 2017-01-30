@@ -21,8 +21,7 @@
                      (fn [idx] (map f (flow idx c))))]
      (map-indexed
        (fn [idx itm]
-         (cond
-           (map? itm)    (merge {:csd (percolate idx)} itm) 
-           (vector? itm) (conj itm (percolate idx)) 
-           :else         [itm (percolate idx)]))
+         (if (map? itm)
+           (merge {:csd (percolate idx)} itm)
+           [itm (percolate idx)]))
        c))))

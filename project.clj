@@ -1,4 +1,4 @@
-(defproject cascade "0.2.1"
+(defproject cascade "0.2.2"
   :description "inform collection items with cascading data"
   :url "http://github.com/derhowie/cascade"
   :license {:name "Eclipse Public License"

@@ -55,7 +55,7 @@ Cascade allows you to provide a predicate function for `reduce` if you want to r
 ;; => (["a" nil] ["b" "a"] ["c" "ab"] ["d" "abc"]) 
 ```
 
-You may also provide a start value value when using `reduce` with cascade.
+You may also provide a start value when using `reduce` with cascade.
 
 ```clojure
 (defn another-predicate-fn
@@ -141,7 +141,7 @@ At a glance it's hard to glean a lot of information from this data, but with cas
 
 Woo! Now we have a collection illustrating the state of affairs at the beginning of each day.
 
-I have found that if you have a lot of information you need to keep a running tally on, like a bank statement for example, this type of output can be very handy. In clojurescript applications with uni-directional data flow, using Reagent for example, calling cascade in the render function will trigger a rerender of each piece of data following the mutated value. 
+Placing a call to cascade in a reactive interface is a good way to re-tally a mutated value's following values. 
 
 
 ## License

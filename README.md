@@ -141,9 +141,6 @@ At a glance it's hard to glean a lot of information from this data, but with cas
 
 Woo! Now we have a collection illustrating the state of affairs at the beginning of each day.
 
-Placing a call to cascade in a reactive interface is a good way to re-tally a mutated value's following values. 
-
-
 ## License
 
 Copyright © 2017 Christopher Howard
